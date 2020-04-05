@@ -2,8 +2,12 @@ from Node import Node
 
 
 class Tree:
-	root = None
-	
+	def __init__(self):
+		self.root=None
+
+	def set_root(self,node):
+		self.root=node
+
 	
 
 	
