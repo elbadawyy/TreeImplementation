@@ -2,25 +2,46 @@ from Node import Node
 
 
 class Tree:
-	root = None
-	
-
+	def __init__(self):
+	        self.root = None
 	
 	def insert(self, data):
-		new_node = Node(data)
-
-		if self.root == None:
-			self.root = new_node
+		if(self.root == None):
+			self.root = Node(data)			
 		else:
-			self.__insert_a_not_root_node(self.root,new_node)
+			if(self.root.left == None):
+				self.root.left = Node(data)
+			elif(self.root.right == None):
+				self.root.right = Node(data)
+	
+	def is_empty(self):
+		if(self.root == None):
+			return 1
+		else:
+			return 0
 
-	def __insert_a_not_root_node(self,current_node ,new_node):
-		if current_node.right == None and current_node.left != None:
-			current_node.right = new_node
-			
-		elif current_node.right == None and current_node.left == None:
-			current_node.left = new_node
-		
+							
 
+	def inOrder(self):
+		if self.is_empty():
+			return
+		else:
+			self.root.left.inOrder()
+			print(self.root.data)
+			self.root.right.inOrder()
+	
+	def get_tree(self):
+		print (self.root.data)
+		print (self.root.left.data)
+		print (self.root.right.data)
+		print (self.root.left.right.data)
+		print (self.root.left.left.data)
+		print (self.root.right.left.data)
+		print (self.root.right.right.data)
+
+	
+
+ 		
+	
 
 
