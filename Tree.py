@@ -5,22 +5,26 @@ class Tree:
 	def __init__(self):
 	        self.root = None
 	
-	def insert(self, data):
-		if(self.root == None):
-			self.root = Node(data)			
-		else:
-			if(self.root.left == None):
-				self.root.left = Node(data)
-			elif(self.root.right == None):
-				self.root.right = Node(data)
+	# def insert(self, data):
+	# 	if(self.root == None):
+	# 		self.root = Node(data)			
+	# 	else:
+	# 		if(self.root.left == None):
+	# 			self.root.left = Node(data)
+	# 		elif(self.root.right == None):
+	# 			self.root.right = Node(data)
 	
 	def is_empty(self):
 		if(self.root == None):
 			return 1
 		else:
 			return 0
+		self.root=None
 
-							
+	def set_root(self,node):
+		self.root=node
+
+			
 
 	def inOrder(self):
 		if self.is_empty():

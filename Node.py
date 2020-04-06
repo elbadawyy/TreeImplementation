@@ -1,8 +1,8 @@
 class Node:
-	def __init__(self, data):
-	        self.data = data
-	        self.left = None
-	        self.right = None
+	def __init__(self, data, right=None, left=None):
+		self.data = data
+		self.left = left
+		self.right = right
 
 	def is_leaf(self):
 		if (self.left == None and self.right == None):
