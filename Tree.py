@@ -44,7 +44,14 @@ class Tree:
 		print (self.root.right.right.data)
 
 	
-
+	def inOrder(self,root):
+		if root ==None :
+			return
+		else:
+			#print(root.left.data)
+			self.inOrder(root.left)
+			print(root.data)
+			self.inOrder(root.right)
  		
 	
 

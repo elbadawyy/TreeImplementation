@@ -21,5 +21,6 @@ node_a=Node(9,node_b,node_c)
 my_tree.set_root(node_a)
 
 
-
+my_tree.set_root(node_a)
+print(my_tree.inOrder(node_a))
 
