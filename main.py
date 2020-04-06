@@ -22,5 +22,5 @@ my_tree.set_root(node_a)
 
 
 my_tree.set_root(node_a)
-print(my_tree.inOrder(node_a))
+print(my_tree.get_leafs(node_a))
 

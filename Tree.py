@@ -26,14 +26,14 @@ class Tree:
 
 			
 
-	def inOrder(self):
-		if self.is_empty():
-			return
-		else:
-			self.root.left.inOrder()
-			print(self.root.data)
-			self.root.right.inOrder()
-	
+	# def inOrder(self):
+	# 	if self.is_empty():
+	# 		return
+	# 	else:
+	# 		self.root.left.inOrder()
+	# 		print(self.root.data)
+	# 		self.root.right.inOrder()
+
 	def get_tree(self):
 		print (self.root.data)
 		print (self.root.left.data)
@@ -52,6 +52,16 @@ class Tree:
 			self.inOrder(root.left)
 			print(root.data)
 			self.inOrder(root.right)
+ 		
+	def get_leafs(self,root):
+		if root ==None :
+			return
+		else:
+			if(root.is_leaf()):
+				print(root.data)
+			self.get_leafs(root.left)
+			
+			self.get_leafs(root.right)
  		
 	
 
